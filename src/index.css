@@ -1,0 +1,151 @@
+:root {
+  font-family:
+    Pretendard, 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic',
+    system-ui, sans-serif;
+  color: #262019;
+  background: #161c20;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --ink: #262019;
+  --muted: #766b5c;
+  --paper: #f4eedf;
+  --paper-deep: #e8ddc6;
+  --line: rgba(71, 57, 39, 0.2);
+  --navy: #172d38;
+  --navy-soft: #284550;
+  --gold: #c7a256;
+  --red: #8d382f;
+  --green: #426c57;
+  --blue: #426a78;
+  --shadow: 0 24px 80px rgba(2, 9, 12, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  background: #161c20;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible {
+  outline: 3px solid #e6bc65;
+  outline-offset: 3px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  color: #fff;
+  background: #8d382f;
+}
+
+.positive {
+  color: #26764f !important;
+}
+
+.negative {
+  color: #a1372d !important;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #8b6d35;
+  font-size: 0.69rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.primary-button,
+.secondary-button,
+.danger-button {
+  min-height: 48px;
+  border: 0;
+  border-radius: 4px;
+  padding: 0.75rem 1.25rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    background 160ms ease;
+}
+
+.primary-button {
+  color: #fff8e9;
+  background: var(--navy);
+  box-shadow: 0 8px 20px rgba(22, 45, 56, 0.2);
+}
+
+.secondary-button {
+  color: var(--ink);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.danger-button {
+  color: #fff;
+  background: var(--red);
+}
+
+.primary-button:hover,
+.secondary-button:hover,
+.danger-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 11px 26px rgba(22, 28, 29, 0.22);
+}
+
+.text-button {
+  border: 0;
+  padding: 0.55rem;
+  color: #625645;
+  background: transparent;
+  font-size: 0.83rem;
+  font-weight: 750;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.reduce-motion *,
+.reduce-motion *::before,
+.reduce-motion *::after {
+  scroll-behavior: auto !important;
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
